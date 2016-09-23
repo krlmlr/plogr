@@ -1,4 +1,0 @@
-if [ -d upstream ]; then
-  rm -r inst/include/plog
-  cp -r upstream/plog inst/include
-fi
