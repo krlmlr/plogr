@@ -15,12 +15,7 @@ public:
   virtual void write(const Record& record)
   {
     util::nstring str = Formatter::format(record); // Use the formatter to get a string from a record.
-
-    // message(str)
-    SEXP e;
-    PROTECT(e = Rf_lang2(Rf_install("message"), Rf_mkString(str.c_str())));
-    R_tryEval(e, R_BaseEnv, NULL);
-    UNPROTECT(1);
+    REprintf("%s", str.c_str());
   }
 };
 
