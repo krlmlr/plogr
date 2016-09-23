@@ -12,7 +12,6 @@ Suggests: Rcpp
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-URLNote: https://github.com/krlmlr/plogr
+URL: https://github.com/krlmlr/plogr
 BugReports: https://github.com/krlmlr/plogr/issues
-URL: http://krlmlr.github.io/plogr
 RoxygenNote: 5.0.1.9000
