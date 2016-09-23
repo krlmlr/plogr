@@ -1,9 +1,6 @@
 #pragma once
 #include <cassert>
 #include <cstring>
-#include <cstdio>
-#include <fcntl.h>
-#include <sys/stat.h>
 
 #ifdef _WIN32
 #   include <time.h>
@@ -11,10 +8,7 @@
 #   include <io.h>
 #   include <share.h>
 #else
-#   include <unistd.h>
-#   include <sys/syscall.h>
 #   include <sys/time.h>
-#   include <pthread.h>
 #endif
 
 #ifdef _WIN32
