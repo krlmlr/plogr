@@ -4,9 +4,9 @@
 \name{plogr-package}
 \alias{plogr}
 \alias{plogr-package}
-\title{The plog C++ logging library}
+\title{The 'plog' C++ Logging Library}
 \description{
-plog is a simple header-only logging library.
+'plog' is a simple header-only logging library.
 Add LinkingTo: plogr in your package to use it.
 }
 \examples{
