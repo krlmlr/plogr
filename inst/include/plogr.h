@@ -30,6 +30,10 @@ inline void init_r(Severity maxSeverity = none) {
   }
 }
 
+inline void init_r(const std::string& maxSeverity = "NONE") {
+  init_r(getSeverityCode(maxSeverity));
+}
+
 }
 
 #endif // #ifndef plogr_plogr_H

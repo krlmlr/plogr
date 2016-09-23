@@ -61,7 +61,7 @@ void plogr_demo() {
   plog::init_r(plog::info);
   LOG_INFO << "test 2";
   LOG_DEBUG << "test 3";
-  plog::init_r(plog::debug);
+  plog::init_r("DEBUG"); // You can also pass a string
   LOG_INFO << "test 4";
   LOG_DEBUG << "test 5";
 }
