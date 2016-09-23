@@ -4,9 +4,6 @@
 
 #ifdef _WIN32
 #   include <time.h>
-#   include <sys/timeb.h>
-#   include <io.h>
-#   include <share.h>
 #else
 #   include <sys/time.h>
 #endif
