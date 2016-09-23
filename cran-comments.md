@@ -8,7 +8,7 @@
 
 0 errors | 0 warnings | 1 note
 
-* This is a new release.
+* This is a new release under MIT license. The packaged library is licensed under Mozilla Public License 2.0; I believe redistribution under MIT license is possible, but I don't have a good understanding of OSS licenses.
 
 ## Reverse dependencies
 
