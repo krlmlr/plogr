@@ -25,6 +25,8 @@ inline void init_r(Severity maxSeverity = none) {
   if (!initialized) {
     init(maxSeverity, &appender);
     initialized = true;
+  } else {
+    init(maxSeverity);
   }
 }
 

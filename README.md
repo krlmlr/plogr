@@ -44,6 +44,9 @@ void plogr_demo() {
   plog::init_r(plog::info);
   LOG_INFO << "test 2";
   LOG_DEBUG << "test 3";
+  plog::init_r(plog::debug);
+  LOG_INFO << "test 4";
+  LOG_DEBUG << "test 5";
 }
 
 #include <Rcpp.h> // not necessary to use plogr
@@ -58,6 +61,8 @@ withr::with_message_sink(con, plogr_demo())
 close(con)
 cat(output, sep = "\n")
 #> plogr_demo@8: test 2
+#> plogr_demo@11: test 4
+#> plogr_demo@12: test 5
 ```
 
-Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.
+Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through. After changing the log level, the debug message is also shown.
