@@ -15,7 +15,7 @@ public:
   virtual void write(const Record& record)
   {
     util::nstring str = Formatter::format(record); // Use the formatter to get a string from a record.
-    REprintf("%s", str.c_str());
+    R_ShowMessage(str.c_str());
   }
 };
 
