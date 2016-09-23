@@ -20,8 +20,12 @@ public:
 };
 
 inline Logger<0>& init_r(Severity maxSeverity = none) {
+  static bool initialized = false;
   static RAppender<FuncMessageFormatter> appender;
-  init(maxSeverity, &appender);
+  if (!initialized) {
+    init(maxSeverity, &appender);
+    initialized = true;
+  }
 }
 
 }
