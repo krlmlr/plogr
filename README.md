@@ -18,7 +18,7 @@ devtools::install_github("krlmlr/plogr")
 Example
 -------
 
-The code shows a small usage example and a demo which we'll call from R below. For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
+The code shows a small usage example and a demo which we'll call from R below. (Rcpp is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
 
 ``` cpp
 // [[Rcpp::depends(plogr)]]
@@ -34,15 +34,15 @@ void plogr_demo() {
 }
 ```
 
-The R code below calls the `plogr_demo()` C++ function defined above. Currently, the messages are printed straight to the standard error, so the message capturing mechanisms employed by `knitr` don't work. We use a sink with a text connection to capture the messages, and print the contents of the variable to which the text connection assigns.
+The R code below calls the `plogr_demo()` C++ function defined above. Currently, the messages are printed straight to the standard error stream, so the message capturing mechanisms employed by `knitr` don't work. We use a sink with a text connection to capture the messages, and print the contents of the variable to which the text connection assigns.
 
 ``` r
 output <- character()
 con <- textConnection("output", "a")
 withr::with_message_sink(con, plogr_demo())
 close(con)
-output
-#> [1] "plogr_demo@9: test 2" ""
+cat(output, sep = "\n")
+#> plogr_demo@9: test 2
 ```
 
-Nothing happens before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is swallowed.
+Nothing happens before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.
