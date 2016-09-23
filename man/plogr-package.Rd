@@ -18,6 +18,8 @@ RObject plogr_demo() {
   plog::init_r(plog::info);
   LOG_INFO << "shown";
   LOG_DEBUG << "not shown";
+  plog::init_r("DEBUG");
+  LOG_DEBUG << "shown now";
   return R_NilValue;
 }
 
