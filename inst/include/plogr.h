@@ -15,13 +15,17 @@ public:
   virtual void write(const Record& record)
   {
     util::nstring str = Formatter::format(record); // Use the formatter to get a string from a record.
-    R_ShowMessage(str.c_str());
+    REprintf("%s", str.c_str());
   }
 };
 
-inline Logger<0>& init_r(Severity maxSeverity = none) {
+inline void init_r(Severity maxSeverity = none) {
+  static bool initialized = false;
   static RAppender<FuncMessageFormatter> appender;
-  init(maxSeverity, &appender);
+  if (!initialized) {
+    init(maxSeverity, &appender);
+    initialized = true;
+  }
 }
 
 }
