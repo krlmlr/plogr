@@ -1,0 +1,9 @@
+PKG_CPPFLAGS = -I../inst/include -DPLOG_NO_FILE_APPENDERS
+
+all: $(SHLIB)
+
+# This file exists only for R CMD INSTALL, is created as empty file
+# for building from source archive
+Makevars.local:
+	touch "$@"
+include Makevars.local
