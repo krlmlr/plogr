@@ -19,6 +19,7 @@ namespace plog
     {
     }
 
+#ifndef PLOG_NO_FILE_APPENDERS
     template<class CharType>
     inline void init_csv(const CharType* fileName, Severity maxSeverity)
     {
@@ -42,4 +43,5 @@ namespace plog
     {
         return init<0>(maxSeverity, fileName, maxFileSize, maxFiles);
     }
+#endif // #ifndef PLOG_NO_FILE_APPENDERS
 }
