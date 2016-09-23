@@ -19,7 +19,7 @@ public:
   }
 };
 
-inline Logger<0>& init_r(Severity maxSeverity = none) {
+inline void init_r(Severity maxSeverity = none) {
   static bool initialized = false;
   static RAppender<FuncMessageFormatter> appender;
   if (!initialized) {
