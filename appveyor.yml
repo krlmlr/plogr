@@ -20,8 +20,6 @@ environment:
     USE_RTOOLS: true
 
 build_script:
-  - rm inst/include/plog
-  - cp -r upstream/plog inst/include
   - travis-tool.sh install_deps
 
 test_script:
