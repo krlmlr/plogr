@@ -1,6 +1,7 @@
 #ifndef plogr_plogr_H
 #define plogr_plogr_H
 
+#define PLOG_NO_FILE_APPENDERS
 #include "plog/Log.h"
 #include "plog/Formatters/FuncMessageFormatter.h"
 

@@ -1,4 +1,4 @@
-PKG_CPPFLAGS = -I../inst/include -DPLOG_NO_FILE_APPENDERS
+PKG_CPPFLAGS = -I../inst/include
 
 all: $(SHLIB)
 
