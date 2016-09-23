@@ -12,7 +12,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# plogr
+# plogr [![Travis-CI Build Status](https://travis-ci.org/krlmlr/plogr.svg?branch=master)](https://travis-ci.org/krlmlr/plogr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/krlmlr/plogr?branch=master&svg=true)](https://ci.appveyor.com/project/krlmlr/plogr)
+
+
 
 Provides the header files for the [plog](https://github.com/SergiusTheBest/plog) header-only C++ logging library, and a method to log to R's standard error stream.
 
