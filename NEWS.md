@@ -1,3 +1,9 @@
+## plogr 0.0-4 (2016-09-23)
+
+- Support severity codes as string (upper-case).
+- Allow changing the severity filter.
+
+
 ## plogr 0.0-3 (2016-09-23)
 
 - Windows compatibility.
