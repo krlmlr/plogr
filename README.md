@@ -8,21 +8,29 @@ Provides the header files for the [plog](https://github.com/SergiusTheBest/plog)
 Installation
 ------------
 
-You can install `plogr` from github with:
+You can install `plogr` from GitHub with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("krlmlr/plogr")
 ```
 
+Usage
+-----
+
+Add `LinkingTo: plogr` to your `DESCRIPTION`, and add `#include <plogr.h>` to all modules where you want to access the logging. If your package has an univeral header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging.
+
 Example
 -------
 
-The code shows a small usage example and a demo which we'll call from R below. (Rcpp is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
+The code shows a small usage example and a demo which we'll call from R below. The `init_r()` function is the only new function added by the R package, and initializes a logger that logs to R's standard error stream.
+
+(Rcpp is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
 
 ``` cpp
+#include <Rcpp.h> // not necessary to use plogr
+
 // [[Rcpp::depends(plogr)]]
-#include <Rcpp.h>
 #include <plogr.h>
 
 // [[Rcpp::export]]
@@ -42,7 +50,7 @@ con <- textConnection("output", "a")
 withr::with_message_sink(con, plogr_demo())
 close(con)
 cat(output, sep = "\n")
-#> plogr_demo@9: test 2
+#> plogr_demo@10: test 2
 ```
 
 Nothing happens before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.
