@@ -41,8 +41,6 @@ The `init_r()` function is the only new function added by the R package, and ini
 For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
 
 ```{Rcpp}
-#include <Rcpp.h> // not necessary to use plogr
-
 // [[Rcpp::depends(plogr)]]
 #include <plogr.h>
 
@@ -53,6 +51,8 @@ void plogr_demo() {
   LOG_INFO << "test 2";
   LOG_DEBUG << "test 3";
 }
+
+#include <Rcpp.h> // not necessary to use plogr
 ```
 
 The R code below calls the `plogr_demo()` C++ function defined above.
