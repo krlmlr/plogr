@@ -3,7 +3,7 @@ Title: The plog C++ logging library
 Version: 0.0-0
 Authors@R: c(
   person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org"),
-  person(""))
+  person("Sergey", "Podobry", role = "cph", comment = "Author of the bundled plog library"))
 Description:
   plog is a simple header-only logging library.
   Add LinkingTo: plogr in your package to use it.
