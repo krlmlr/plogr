@@ -11,12 +11,6 @@ matrix:
       sudo: false
     - os: osx
       osx_image: xcode7.2
-      before_install:
-        - brew install mariadb
-        - mysql.server start
-      latex: false
-    - os: osx
-      osx_image: xcode7.2
       latex: false
     - os: osx
       osx_image: beta-xcode6.1
