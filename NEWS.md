@@ -1,3 +1,8 @@
+## plogr 0.0-3 (2016-09-23)
+
+- Windows compatibility.
+
+
 ## plogr 0.0-2 (2016-09-23)
 
 - Use Travis and AppVeyor.
