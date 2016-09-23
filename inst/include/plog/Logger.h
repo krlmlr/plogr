@@ -9,7 +9,7 @@ namespace plog
     class Logger : public util::Singleton<Logger<instance> >, public IAppender
     {
     public:
-        Logger(Severity maxSeverity = none) : m_maxSeverity(maxSeverity)
+        Logger() : m_maxSeverity(none)
         {
         }
 

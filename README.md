@@ -3,7 +3,7 @@
 plogr [![Travis-CI Build Status](https://travis-ci.org/krlmlr/plogr.svg?branch=master)](https://travis-ci.org/krlmlr/plogr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/krlmlr/plogr?branch=master&svg=true)](https://ci.appveyor.com/project/krlmlr/plogr)
 ============================================================================================================================================================================================================================================================================================
 
-Provides the header files for the [plog](https://github.com/SergiusTheBest/plog) header-only C++ logging library, and a method to log to R's standard error stream.
+Provides the header files for a stripped-down version of the [plog](https://github.com/SergiusTheBest/plog) header-only C++ logging library, and a method to log to R's standard error stream.
 
 Installation
 ------------
@@ -18,12 +18,21 @@ devtools::install_github("krlmlr/plogr")
 Usage
 -----
 
-Add `LinkingTo: plogr` to your `DESCRIPTION`, and add `#include <plogr.h>` to all modules where you want to access the logging. If your package has an univeral header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging.
+Add `LinkingTo: plogr` to your `DESCRIPTION`, and add `#include <plogr.h>` to all modules where you want to access the logging. If your package has an univeral header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging. The following system header files will be included:
+
+-   `sstream`
+-   `iostream`
+-   `vector`
+-   `cassert`
+-   `cstring`
+-   `time.h` (on Linux/OS X)
+-   `sys/time.h` (on Windows)
+-   `R.h`
 
 Example
 -------
 
-The code shows a small usage example and a demo which we'll call from R below. (`Rcpp` is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) The `init_r()` function is the only new function added by the R package, and initializes a logger that logs to R's standard error stream. For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
+The code shows a small usage example and a demo which we'll call from R below. (`Rcpp` is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) The `init_r()` function is the only new function added by the R package, and initializes a logger that logs to R's standard error stream. For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme); for compatibility reasons you won't find the file appenders in this package.
 
 ``` cpp
 // [[Rcpp::depends(plogr)]]
@@ -35,6 +44,9 @@ void plogr_demo() {
   plog::init_r(plog::info);
   LOG_INFO << "test 2";
   LOG_DEBUG << "test 3";
+  plog::init_r("DEBUG"); // You can also pass a string
+  LOG_INFO << "test 4";
+  LOG_DEBUG << "test 5";
 }
 
 #include <Rcpp.h> // not necessary to use plogr
@@ -49,6 +61,8 @@ withr::with_message_sink(con, plogr_demo())
 close(con)
 cat(output, sep = "\n")
 #> plogr_demo@8: test 2
+#> plogr_demo@11: test 4
+#> plogr_demo@12: test 5
 ```
 
-Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.
+Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through. After changing the log level, the debug message is also shown.

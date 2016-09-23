@@ -12,7 +12,7 @@ namespace plog
         debug = 5,
         verbose = 6
     };
-        
+
     inline const char* getSeverityName(Severity severity)
     {
         switch (severity)
@@ -32,5 +32,23 @@ namespace plog
         default:
             return "NONE";
         }
+    }
+
+    inline Severity getSeverityCode(const std::string& name)
+    {
+        if (name == "FATAL")
+            return fatal;
+        if (name == "ERROR")
+            return error;
+        if (name == "WARN")
+            return warning;
+        if (name == "INFO")
+            return info;
+        if (name == "DEBUG")
+            return debug;
+        if (name == "VERB")
+            return verbose;
+
+        return none;
     }
 }

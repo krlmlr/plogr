@@ -11,7 +11,8 @@ namespace plog
     template<int instance>
     inline Logger<instance>& init(Severity maxSeverity = none, IAppender* appender = NULL)
     {
-        static Logger<instance> logger(maxSeverity);
+        static Logger<instance> logger;
+        logger.setMaxSeverity(maxSeverity);
         return appender ? logger.addAppender(appender) : logger;
     }
 

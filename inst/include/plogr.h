@@ -25,7 +25,13 @@ inline void init_r(Severity maxSeverity = none) {
   if (!initialized) {
     init(maxSeverity, &appender);
     initialized = true;
+  } else {
+    init(maxSeverity);
   }
+}
+
+inline void init_r(const std::string& maxSeverity = "NONE") {
+  init_r(getSeverityCode(maxSeverity));
 }
 
 }

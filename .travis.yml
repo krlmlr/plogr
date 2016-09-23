@@ -1,5 +1,24 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
-language: R
-sudo: false
+language: r
 cache: packages
+
+matrix:
+  include:
+    - os: linux
+      dist: precise
+      sudo: false
+    - os: linux
+      dist: trusty
+      sudo: false
+    - os: osx
+      osx_image: xcode7.2
+      latex: false
+    - os: osx
+      osx_image: beta-xcode6.1
+      disable_homebrew: true
+
+warnings_are_errors: true
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
