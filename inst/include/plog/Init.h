@@ -3,10 +3,6 @@
 #include <plog/Severity.h>
 #include <plog/Appenders/IAppender.h>
 
-#ifndef PLOG_NO_FILE_APPENDERS
-#include <plog/InitFile.h>
-#endif // #ifndef PLOG_NO_FILE_APPENDERS
-
 namespace plog
 {
     //////////////////////////////////////////////////////////////////////////
