@@ -42,14 +42,12 @@ namespace plog
             return *this;
         }
 
-#ifndef __ANDROID__
         Record& operator<<(wchar_t data)
         {
             wchar_t str[] = { data, 0 };
             *this << str;
             return *this;
         }
-#endif
 
         template<typename T>
         Record& operator<<(const T& data)
