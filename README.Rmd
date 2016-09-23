@@ -69,5 +69,5 @@ close(con)
 cat(output, sep = "\n")
 ```
 
-Nothing happens before we actually initialize the logger.
+Nothing is printed before we actually initialize the logger.
 Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.

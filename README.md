@@ -51,4 +51,4 @@ cat(output, sep = "\n")
 #> plogr_demo@8: test 2
 ```
 
-Nothing happens before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.
+Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through.
