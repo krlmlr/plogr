@@ -23,9 +23,7 @@ Add `LinkingTo: plogr` to your `DESCRIPTION`, and add `#include <plogr.h>` to al
 Example
 -------
 
-The code shows a small usage example and a demo which we'll call from R below. The `init_r()` function is the only new function added by the R package, and initializes a logger that logs to R's standard error stream.
-
-(Rcpp is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
+The code shows a small usage example and a demo which we'll call from R below. The `init_r()` function is the only new function added by the R package, and initializes a logger that logs to R's standard error stream. (`Rcpp` is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme).
 
 ``` cpp
 // [[Rcpp::depends(plogr)]]
