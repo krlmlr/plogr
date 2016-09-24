@@ -1,23 +1,6 @@
-## plogr 0.0-4 (2016-09-23)
+# plogr 0.1 (2016-09-24)
 
-- Support severity codes as string (upper-case).
-- Allow changing the severity filter.
-
-
-## plogr 0.0-3 (2016-09-23)
-
-- Windows compatibility.
-
-
-## plogr 0.0-2 (2016-09-23)
-
-- Use Travis and AppVeyor.
-- Add initialization guard to avoid adding the same appender twice.
-- Add package documentation with example.
-- Use `REprintf()` instead of `R_ShowMessage()`.
-
-
-## plogr 0.0-1 (2016-09-23)
-
-- Initial version with plog 0.0-1.
-
+- Using a stripped version of plog 1.0-1.
+- Works on Linux, OS X, and Windows.
+- Log items are printed using.
+- New `plog::init_r()` to initialize logging via  `REprintf()`, allows changing the log level and passing the log level as string.

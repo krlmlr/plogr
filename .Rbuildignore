@@ -6,3 +6,4 @@
 ^\.travis\.yml$
 ^appveyor\.yml$
 ^src/Makevars\.local$
+^cran-comments\.md$
