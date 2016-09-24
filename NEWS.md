@@ -1,3 +1,9 @@
+## plogr 0.1-1 (2016-09-24)
+
+- Remove useless operator overloads.
+- Reword description.
+
+
 # plogr 0.1 (2016-09-24)
 
 - Using a stripped version of plog 1.0-1.
