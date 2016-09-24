@@ -6,8 +6,8 @@
 \alias{plogr-package}
 \title{The 'plog' C++ Logging Library}
 \description{
-'plog' is a simple header-only logging library.
-Add 'LinkingTo: plogr' in your package to use it.
+A simple header-only logging library for C++.
+Add 'LinkingTo: plogr' to 'DESCRIPTION', and '#include <plogr.h>' in your C++ modules to use it.
 }
 \examples{
 plogr_demo <- Rcpp::cppFunction(depends = "plogr", '
