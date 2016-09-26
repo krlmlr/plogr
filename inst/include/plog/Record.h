@@ -5,24 +5,6 @@
 
 namespace plog
 {
-    namespace detail
-    {
-        //////////////////////////////////////////////////////////////////////////
-        // Stream output operators as free functions
-
-        inline void operator<<(util::nstringstream& stream, const char* data)
-        {
-            data = data ? data : "(null)";
-
-            std::operator<<(stream, data);
-        }
-
-        inline void operator<<(util::nstringstream& stream, const std::string& data)
-        {
-            plog::detail::operator<<(stream, data.c_str());
-        }
-    }
-
     class Record
     {
     public:
@@ -52,8 +34,6 @@ namespace plog
         template<typename T>
         Record& operator<<(const T& data)
         {
-            using namespace plog::detail;
-
             m_message << data;
             return *this;
         }
