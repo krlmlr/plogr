@@ -1,6 +1,6 @@
 Package: plogr
 Title: The 'plog' C++ Logging Library
-Version: 0.1
+Version: 0.1-1
 Date: 2016-09-24
 Authors@R: c(
   person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org"),
