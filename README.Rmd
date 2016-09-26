@@ -70,16 +70,10 @@ void plogr_demo() {
 ```
 
 The R code below calls the `plogr_demo()` C++ function defined above.
-Currently, the messages are printed straight to the standard error stream, so the message capturing mechanisms employed by `knitr` don't work.
-We use a sink with a text connection to capture the messages, and print the contents of the variable to which the text connection assigns.
+Each log entry is forwarded to `base::message(appendLF = FALSE)`.
 
-
-```{r}
-output <- character()
-con <- textConnection("output", "a")
-withr::with_message_sink(con, plogr_demo())
-close(con)
-cat(output, sep = "\n")
+```{r message=TRUE}
+invisible(plogr_demo())
 ```
 
 Nothing is printed before we actually initialize the logger.

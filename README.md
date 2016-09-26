@@ -52,14 +52,10 @@ void plogr_demo() {
 #include <Rcpp.h> // not necessary to use plogr
 ```
 
-The R code below calls the `plogr_demo()` C++ function defined above. Currently, the messages are printed straight to the standard error stream, so the message capturing mechanisms employed by `knitr` don't work. We use a sink with a text connection to capture the messages, and print the contents of the variable to which the text connection assigns.
+The R code below calls the `plogr_demo()` C++ function defined above. Each log entry is forwarded to `base::message(appendLF = FALSE)`.
 
 ``` r
-output <- character()
-con <- textConnection("output", "a")
-withr::with_message_sink(con, plogr_demo())
-close(con)
-cat(output, sep = "\n")
+invisible(plogr_demo())
 #> plogr_demo@8: test 2
 #> plogr_demo@11: test 4
 #> plogr_demo@12: test 5
