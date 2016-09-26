@@ -1,12 +1,12 @@
-## plogr 0.1-1 (2016-09-24)
+## plogr 0.1-10 (2016-09-26)
 
-- Remove useless operator overloads.
-- Reword description.
+Same as 0.1-1.
 
 
-# plogr 0.1 (2016-09-24)
+
+# plogr 0.1-1 (2016-09-24)
 
 - Using a stripped version of plog 1.0-1.
 - Works on Linux, OS X, and Windows.
-- Log items are printed using.
+- Log items are printed using `REprintf()`.
 - New `plog::init_r()` to initialize logging via  `REprintf()`, allows changing the log level and passing the log level as string.
