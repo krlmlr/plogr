@@ -12,6 +12,26 @@ template<class Formatter>
 class RAppender : public IAppender
 {
 public:
+  enum OperationMode {
+    PRINTF,
+    MESSAGE,
+  }
+
+public:
+  virtual void write(const Record& record)
+  {
+    util::nstring str = Formatter::format(record); // Use the formatter to get a string from a record.
+    REprintf("%s", str.c_str());
+  }
+
+private:
+  OperationMode mode;
+};
+
+template<class Formatter>
+class RMessageAppender : public IAppender
+{
+public:
   virtual void write(const Record& record)
   {
     util::nstring str = Formatter::format(record); // Use the formatter to get a string from a record.
