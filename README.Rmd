@@ -31,7 +31,7 @@ devtools::install_github("krlmlr/plogr")
 ## Usage
 
 Add `LinkingTo: plogr` to your `DESCRIPTION`, and add `#include <plogr.h>` to all modules where you want to access the logging.
-If your package has an univeral header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging.
+If your package has an universal header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging.
 The following system header files will be included:
 
 - `sstream`
