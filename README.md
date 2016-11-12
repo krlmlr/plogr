@@ -60,9 +60,9 @@ con <- textConnection("output", "a")
 withr::with_message_sink(con, plogr_demo())
 close(con)
 cat(output, sep = "\n")
-#> plogr_demo@8: test 2
-#> plogr_demo@11: test 4
-#> plogr_demo@12: test 5
+#> void plogr_demo@8: test 2
+#> void plogr_demo@11: test 4
+#> void plogr_demo@12: test 5
 ```
 
 Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through. After changing the log level, the debug message is also shown.
