@@ -35,6 +35,10 @@ Example
 The code shows a small usage example and a demo which we'll call from R below. (`Rcpp` is *not* necessary to use `plogr`, it is only needed to run the C++ code chunk.) The `init_r()` function is the only new function added by the R package, and initializes a logger that logs to R's standard error stream. For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme); for compatibility reasons you won't find the file appenders in this package.
 
 ``` cpp
+// If we omit this, logging is disabled altogether.
+// In a package, you would probably add -DPLOGR_ENABLE to PKG_CPPFLAGS.
+#define PLOGR_ENABLE
+
 // [[Rcpp::depends(plogr)]]
 #include <plogr.h>
 
@@ -60,9 +64,9 @@ con <- textConnection("output", "a")
 withr::with_message_sink(con, plogr_demo())
 close(con)
 cat(output, sep = "\n")
-#> void plogr_demo@8: test 2
-#> void plogr_demo@11: test 4
-#> void plogr_demo@12: test 5
+#> void plogr_demo@12: test 2
+#> void plogr_demo@15: test 4
+#> void plogr_demo@16: test 5
 ```
 
 Nothing is printed before we actually initialize the logger. Because it is initialized to the `info` level, the debug log message is not shown, and only "test 2" comes through. After changing the log level, the debug message is also shown.

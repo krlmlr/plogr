@@ -54,6 +54,10 @@ The `init_r()` function is the only new function added by the R package, and ini
 For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme); for compatibility reasons you won't find the file appenders in this package.
 
 ```{Rcpp}
+// If we omit this, logging is disabled altogether.
+// In a package, you would probably add -DPLOGR_ENABLE to PKG_CPPFLAGS.
+#define PLOGR_ENABLE
+
 // [[Rcpp::depends(plogr)]]
 #include <plogr.h>
 
