@@ -8,3 +8,4 @@
 ^src/Makevars\.local$
 ^cran-comments\.md$
 ^CMakeLists\.txt$
+^revdep$
