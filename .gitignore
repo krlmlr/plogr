@@ -6,3 +6,5 @@ src/*.o
 src/*.d
 src/*.dll
 src/*.so
+/.idea
+/.drake

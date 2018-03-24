@@ -1,5 +1,7 @@
 ---
-output: github_document
+output:
+  github_document:
+    html_preview: false
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -31,7 +33,7 @@ devtools::install_github("krlmlr/plogr")
 ## Usage
 
 Add `LinkingTo: plogr` to your `DESCRIPTION`, and add `#include <plogr.h>` to all modules where you want to access the logging.
-If your package has an univeral header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging.
+If your package has a universal header file which you include from all modules, it's probably a good idea to insert the `#include` directive there, so that all of your code has access to logging.
 The following system header files will be included:
 
 - `sstream`
@@ -52,6 +54,10 @@ The `init_r()` function is the only new function added by the R package, and ini
 For further details consult the [plog documentation](https://github.com/SergiusTheBest/plog#readme); for compatibility reasons you won't find the file appenders in this package.
 
 ```{Rcpp}
+// If we omit this, logging is disabled altogether.
+// In a package, you would probably add -DPLOGR_ENABLE to PKG_CPPFLAGS.
+#define PLOGR_ENABLE
+
 // [[Rcpp::depends(plogr)]]
 #include <plogr.h>
 
