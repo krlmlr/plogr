@@ -1,17 +1,13 @@
 ## Test environments
-* local Ubuntu 16.04 install, R 3.3.1
-* ubuntu 12.04, 14.04 (on travis-ci), R 3.3.1
-* OS X (on travis-ci), R 3.3.1
+* local Ubuntu 16.04 install, R 3.4.3
+* ubuntu 14.04 (on travis-ci), R 3.4.3
+* OS X (on travis-ci), R 3.4.3
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* This is a new release under MIT license. The packaged library is licensed under Mozilla Public License 2.0; I believe redistribution under MIT license is possible, but I don't have a good understanding of OSS licenses.
-
-* Resubmission with corrected package description.
+OK
 
 ## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
+Checked all 6 downstream dependencies, no regressions found.
