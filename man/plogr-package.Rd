@@ -4,7 +4,7 @@
 \name{plogr-package}
 \alias{plogr}
 \alias{plogr-package}
-\title{The 'plog' C++ Logging Library}
+\title{plogr: The 'plog' C++ Logging Library}
 \description{
 A simple header-only logging library for C++.
 Add 'LinkingTo: plogr' to 'DESCRIPTION', and '#include <plogr.h>' in your C++ modules to use it.
@@ -30,4 +30,20 @@ RObject plogr_demo() {
 
 plogr_demo()
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/krlmlr/plogr#readme}
+  \item Report bugs at \url{https://github.com/krlmlr/plogr/issues}
+}
 
+}
+\author{
+\strong{Maintainer}: Kirill Müller \email{krlmlr+r@mailbox.org}
+
+Other contributors:
+\itemize{
+  \item Sergey Podobry (Author of the bundled plog library) [copyright holder]
+}
+
+}
