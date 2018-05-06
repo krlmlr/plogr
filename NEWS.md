@@ -1,6 +1,6 @@
 # plogr 0.2.0 (2018-03-24)
 
-- The `PLOGR_ENABLE` macro needs to be enabled at compilation time for the library to have any effect (#3)
+- The `PLOGR_ENABLE` macro needs to be enabled at compilation time for the library to have any effect (#3).
 - In GCC builds, the function is now shown with its return type; stripping the return type failed for functions in template clases with more than one template argument.
 
 

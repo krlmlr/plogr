@@ -14,6 +14,12 @@ namespace plog
             util::ftime(&m_time);
         }
 
+        Record(const Record& r)
+            : m_severity(r.m_severity), m_object(r.m_object), m_line(r.m_line), m_func(r.m_func) {
+            m_message << r.getMessage();
+        }
+
+    public:
         //////////////////////////////////////////////////////////////////////////
         // Stream output operators
 
