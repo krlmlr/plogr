@@ -30,13 +30,6 @@ namespace plog
             return *this;
         }
 
-        Record& operator<<(wchar_t data)
-        {
-            wchar_t str[] = { data, 0 };
-            *this << str;
-            return *this;
-        }
-
         template<typename T>
         Record& operator<<(const T& data)
         {
