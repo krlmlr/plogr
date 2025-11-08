@@ -3,7 +3,7 @@ Title: The 'plog' C++ Logging Library
 Version: 0.2.0
 Date: 2018-03-24
 Authors@R: c(
-  person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org"),
+  person("Kirill", "Müller", role = c("aut", "cre"), email = "kirill@cynkra.com"),
   person("Sergey", "Podobry", role = "cph", comment = "Author of the bundled plog library"))
 Description:
   A simple header-only logging library for C++.
@@ -14,4 +14,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/krlmlr/plogr#readme
 BugReports: https://github.com/krlmlr/plogr/issues
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 7.3.3.9000

@@ -6,8 +6,7 @@
 \alias{plogr-package}
 \title{plogr: The 'plog' C++ Logging Library}
 \description{
-A simple header-only logging library for C++.
-Add 'LinkingTo: plogr' to 'DESCRIPTION', and '#include <plogr.h>' in your C++ modules to use it.
+A simple header-only logging library for C++. Add 'LinkingTo: plogr' to 'DESCRIPTION', and '#include <plogr.h>' in your C++ modules to use it.
 }
 \examples{
 plogr_demo <- Rcpp::cppFunction(depends = "plogr", '
@@ -39,7 +38,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Kirill Müller \email{krlmlr+r@mailbox.org}
+\strong{Maintainer}: Kirill Müller \email{kirill@cynkra.com}
 
 Other contributors:
 \itemize{

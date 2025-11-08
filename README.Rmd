@@ -14,7 +14,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-# plogr [![Travis-CI Build Status](https://travis-ci.org/krlmlr/plogr.svg?branch=master)](https://travis-ci.org/krlmlr/plogr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/krlmlr/plogr?branch=master&svg=true)](https://ci.appveyor.com/project/krlmlr/plogr)
+# plogr
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/krlmlr/plogr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/krlmlr/plogr/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/plogr)](https://CRAN.R-project.org/package=plogr)
+<!-- badges: end -->
 
 
 
