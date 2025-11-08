@@ -11,3 +11,4 @@
 ^revdep$
 ^\.idea$
 ^\.github$
+^include$
