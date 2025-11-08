@@ -1,14 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# plogr
+
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/krlmlr/plogr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/krlmlr/plogr/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/plogr)](https://CRAN.R-project.org/package=plogr)
 <!-- badges: end -->
-
-# plogr
 
 Provides the header files for a stripped-down version of the
 [plog](https://github.com/SergiusTheBest/plog) header-only C++ logging

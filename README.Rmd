@@ -14,12 +14,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+# plogr
+
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/krlmlr/plogr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/krlmlr/plogr/actions/workflows/R-CMD-check.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/plogr)](https://CRAN.R-project.org/package=plogr)
 <!-- badges: end -->
-
-# plogr
 
 
 
