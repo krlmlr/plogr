@@ -9,6 +9,7 @@
 A simple header-only logging library for C++. Add 'LinkingTo: plogr' to 'DESCRIPTION', and '#include <plogr.h>' in your C++ modules to use it.
 }
 \examples{
+\dontshow{if (requireNamespace("Rcpp", quietly = TRUE)) withAutoprint(\{ # examplesIf}
 plogr_demo <- Rcpp::cppFunction(depends = "plogr", '
 // C++ code begin
 #include <plogr.h>
@@ -28,6 +29,7 @@ RObject plogr_demo() {
 )
 
 plogr_demo()
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Useful links:

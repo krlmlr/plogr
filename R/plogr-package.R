@@ -1,4 +1,4 @@
-#' @examples
+#' @examplesIf requireNamespace("Rcpp", quietly = TRUE)
 #' plogr_demo <- Rcpp::cppFunction(depends = "plogr", '
 #' // C++ code begin
 #' #include <plogr.h>
